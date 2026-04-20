@@ -1,0 +1,25 @@
+Start program
+
+Create a binary search tree for each test case
+
+For each test case:
+    Insert each number into the binary search tree
+    Call the singleParent function
+    Display the number of nodes with exactly one child
+
+Function singleParent(node):
+    If node is null
+        Return 0
+
+    Set count to 0
+
+    If node has a left child and no right child
+        Set count to 1
+    Else if node has a right child and no left child
+        Set count to 1
+
+    Return count
+           + singleParent(left subtree)
+           + singleParent(right subtree)
+
+End program
